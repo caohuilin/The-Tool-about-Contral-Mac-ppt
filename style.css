@@ -11,21 +11,87 @@
     bottom: 0;
     left: 0;
 }
+.container .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 30px 0;
+}
+.last, .menu {
+  transform: scale(0.8);
+}
+.last {
+  transform: rotate(-90deg);
+}
 .container .middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   position: relative;
 }
-.pie {
-  width: 10rem;
-  height: 10rem;
-  background-color: red;
-  border-radius: 10rem 0 0;
+.middle-1 {
   position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translate(-50%, -50%);
 }
-#pie-1 {
+.middle-2 {
+  margin-top: -100px;
+  width: 256px;
+  height: 256px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: solid 1px #d3d5fe;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.middle-2 svg {
+  transform: scale(3) rotate(90deg);
+}
+.middle .pie-list {
+  width: 16rem;
+  height: 16rem;
+  overflow: hidden;
   transform: rotate(45deg);
 }
+.pie {
+  width: 126px;
+  height: 126px;
+  background-color: #fff;
+  border-radius: 10rem 0 0;
+  border: solid 1px #d3d5fe;
+}
+.pie svg{
+  transform: rotate(-45deg) translate(0px, 73px);
+}
+.pie:hover {
+  background-color: #c4c7fc;
+}
+.up-button {
+  stroke: #d3d5fe;
+}
+.pie:hover .up-button {
+  stroke: #8989e8;
+}
 #pie-2 {
-  transform: rotate(90deg);
+  transform: rotate(90deg) translate(-128px, -127px);
+}
+#pie-3 {
+  transform: rotate(180deg) translate(-127px,130px);
+}
+#pie-4 {
+  transform: rotate(-90deg) translate(258px, 0px);
+}
+.circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  border: 1px solid #d3d5fe;
 }
 @media screen and (min-width: 730px) {
   .container {
